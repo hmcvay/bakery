@@ -19,7 +19,7 @@ namespace Bakery.Tests
     public void BreadPrice_ReturnBreadPrice_Int()
     {
       int breadAmount = 1;
-      int breadPrice = 6;
+      int breadPrice = 5;
       Bread newBread = new Bread(breadAmount);
       Assert.AreEqual(breadPrice, newBread.Price);
     }
