@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Bakery.Models
 {
@@ -10,22 +11,26 @@ namespace Bakery.Models
      UnitCount = unitCount;
     }
 
-    // public int BreadPrice(int amount)
-    // {
-    //   Bread newBread = new Bread(amount);
-    //   int totalPrice = amount * newBread.Price;
-    //   return totalPrice;
-    // }
-
-    // public static int ThirdFree(int amount)
-    // {
-    //   for (int i = 0; i < amount.length - 1; i++)
-    //   {
-    //     if (amount[i] % 3 == 0)
-    //     {
-    //       Bread.Price = 0;
-    //     }
-    //   }
-    // }
+    public static int GetUnitPrice(int unitCount)
+    {
+      int unitPrice = 0;
+      List<int> unitList = new List<int>{};
+      for(int i = 0; i <= unitCount; i++)
+      {
+        unitList.Add(i);
+      }
+      foreach(int unit in unitList)
+      {
+        if(unit % 3 ==0)
+        {
+          unitPrice += 0;
+        }
+        else
+        {
+          unitPrice += 5;
+        }
+      }
+      return unitPrice;       
+    }
   }
 }
