@@ -6,9 +6,11 @@ namespace Bakery.Models
   public class Bread
   {
     public int UnitCount { get; set; }
+    private static List<Bread> _instances = new List<Bread>{};
     public Bread(int unitCount)
     {
      UnitCount = unitCount;
+     _instances.Add(this);
     }
 
     public static int GetUnitPrice(int unitCount)
