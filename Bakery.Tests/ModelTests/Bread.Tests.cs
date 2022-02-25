@@ -26,10 +26,10 @@ namespace Bakery.Tests
 
     public void GetPrice_ReturnPriceOfUnits_Int()
     {
-      Bread newBread = new Bread(2);
+      Bread newBread = new Bread(4);
       int units = newBread.UnitCount;
       int price = Bread.GetUnitPrice(units);
-      Assert.AreEqual(11, price);
+      Assert.AreEqual(15, price);
     }
 
   }
