@@ -4,9 +4,10 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    public Pastry()
+    public int PastryCount { get; set; }
+    public Pastry(int pastryCount)
     {
-      //stuff to do here
+      PastryCount = pastryCount;
     }
   }
 }
