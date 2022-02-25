@@ -4,20 +4,18 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public int Amount { get; set; }
-    public int Price { get; }
-    public Bread(int amount)
+    public int UnitCount { get; set; }
+    public Bread(int unitCount)
     {
-     Amount = amount;
-     Price = 5;
+     UnitCount = unitCount;
     }
 
-    public static int BreadPrice(int amount)
-    {
-      // int price = Bread.Price;
-      int totalPrice = amount * newBread.Price;
-      return totalPrice;
-    }
+    // public int BreadPrice(int amount)
+    // {
+    //   Bread newBread = new Bread(amount);
+    //   int totalPrice = amount * newBread.Price;
+    //   return totalPrice;
+    // }
 
     // public static int ThirdFree(int amount)
     // {

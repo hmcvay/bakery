@@ -16,19 +16,12 @@ namespace Bakery.Tests
 
     [TestMethod]
 
-    public void BreadPrice_ReturnBreadPrice_Int()
+    public void UnitCount_ReturnBreadUnitCount_Int()
     {
-      int breadAmount = 2;
-      int breadPrice = 10;
-      Bread newBread = new Bread(breadAmount);
-      Assert.AreEqual(breadPrice, newBread.Price);
+      Bread newBread = new Bread(2);
+      int units = newBread.UnitCount;
+      Assert.AreEqual(3, units);
     }
 
-    // [TestMethod]
-    
-    // public void ThirdFree_EveryThirdBreadFree_Int()
-    // {
-
-    // }
   }
 }
