@@ -23,5 +23,12 @@ namespace Bakery.Tests
       Bread newBread = new Bread(breadAmount);
       Assert.AreEqual(breadPrice, newBread.Price);
     }
+
+    [TestMethod]
+    
+    public void ThirdFree_EveryThirdBreadFree_Int()
+    {
+      
+    }
   }
 }
