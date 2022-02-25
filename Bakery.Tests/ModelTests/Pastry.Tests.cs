@@ -16,11 +16,20 @@ namespace Bakery.Tests
 
     [TestMethod]
 
-    public void GetPastryCount_ReturnsCountOfPastries ()
+    public void GetPastryCount_ReturnsCountOfPastries_Int ()
     {
       Pastry newPastry = new Pastry(2);
       int testCount = 2;
       Assert.AreEqual(testCount, newPastry.PastryCount);
+    }
+
+    [TestMethod]
+    public void GetPastryPrice_ReturnsPriceOfPastries_Int()
+    {
+      Pastry newPastry = new Pastry(4);
+      int units = newPastry.PastryCount;
+      int price = Pastry.GetPastryPrice(units);
+      Assert.AreEqual(7, price);
     }
   }
 }
