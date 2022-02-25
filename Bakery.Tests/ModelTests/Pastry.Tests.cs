@@ -19,7 +19,7 @@ namespace Bakery.Tests
     public void GetPastryCount_ReturnsCountOfPastries ()
     {
       Pastry newPastry = new Pastry(2);
-      int testCount = 1;
+      int testCount = 2;
       Assert.AreEqual(testCount, newPastry.PastryCount);
     }
   }
