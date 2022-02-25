@@ -20,7 +20,7 @@ namespace Bakery.Tests
     {
       Bread newBread = new Bread(2);
       int units = newBread.UnitCount;
-      Assert.AreEqual(3, units);
+      Assert.AreEqual(2, units);
     }
 
   }
