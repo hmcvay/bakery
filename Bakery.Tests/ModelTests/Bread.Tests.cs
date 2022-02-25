@@ -18,17 +18,17 @@ namespace Bakery.Tests
 
     public void BreadPrice_ReturnBreadPrice_Int()
     {
-      int breadAmount = 1;
-      int breadPrice = 5;
+      int breadAmount = 2;
+      int breadPrice = 10;
       Bread newBread = new Bread(breadAmount);
       Assert.AreEqual(breadPrice, newBread.Price);
     }
 
-    [TestMethod]
+    // [TestMethod]
     
-    public void ThirdFree_EveryThirdBreadFree_Int()
-    {
-      
-    }
+    // public void ThirdFree_EveryThirdBreadFree_Int()
+    // {
+
+    // }
   }
 }

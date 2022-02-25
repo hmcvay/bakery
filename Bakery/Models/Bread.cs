@@ -12,10 +12,22 @@ namespace Bakery.Models
      Price = 5;
     }
 
-    public static int ThirdFree(int amount)
+    public static int BreadPrice(int amount)
     {
-      //need loop through amount... 
-      // if amount % 3 == 0, price = 0?
+      // int price = Bread.Price;
+      int totalPrice = amount * newBread.Price;
+      return totalPrice;
     }
+
+    // public static int ThirdFree(int amount)
+    // {
+    //   for (int i = 0; i < amount.length - 1; i++)
+    //   {
+    //     if (amount[i] % 3 == 0)
+    //     {
+    //       Bread.Price = 0;
+    //     }
+    //   }
+    // }
   }
 }
