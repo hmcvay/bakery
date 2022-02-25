@@ -26,10 +26,10 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetPastryPrice_ReturnsPriceOfPastries_Int()
     {
-      Pastry newPastry = new Pastry(4);
+      Pastry newPastry = new Pastry(8);
       int units = newPastry.PastryCount;
       int price = Pastry.GetPastryPrice(units);
-      Assert.AreEqual(7, price);
+      Assert.AreEqual(14, price);
     }
   }
 }
