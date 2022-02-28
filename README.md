@@ -6,12 +6,12 @@
 
 ## Technologies Used
 
-- _C#_
-- _.NET 5.0
-- _MSTest_
-- _dotnet script REPL_
-- _git_
-- _VSCode_
+- C#_
+- .NET 5.0
+- MSTest_
+- dotnet script REPL_
+- git_
+- VSCode_
 
 ## Description
 
@@ -32,6 +32,8 @@ Use the console application to view special pricing for Bread and Pastries at Pi
 ## Known Bugs
 
 - There is a warning when you run the app due to an async function that lacks await. This is so that I can have a function, `Start()` that loops through the console app when called, that can *also* access local variables for price to display a Grand Total; when `Start()` was static, it could not access price variables.
+
+The async function lacking await does not interfere with functionality of the code at the present moment, though could prove to be an issue if this project were continued and expanded.
 
 ## License
 
