@@ -6,12 +6,12 @@
 
 ## Technologies Used
 
-- C#_
+- C#
 - .NET 5.0
-- MSTest_
-- dotnet script REPL_
-- git_
-- VSCode_
+- MSTest
+- dotnet script REPL
+- git
+- VSCode
 
 ## Description
 
