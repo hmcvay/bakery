@@ -66,12 +66,12 @@ namespace Bakery
           }
           else if (choice == "done")
           {
-            // WHY DOESN'T THIS WORK?
-            //int pastryAmountTotal = Pastry.GetPastryPrice(pastryAmount);
-            // int breadAmountTotal = Bread.GetUnitPrice(breadAmount);
             int grandTotal = pastryTotal + breadTotal;
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Your grand total is: $" + grandTotal);
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Thank you");
+            Console.WriteLine("Come again soon ♡´･ᴗ･`♡");
             Console.WriteLine("----------------------------------");
           }
           else

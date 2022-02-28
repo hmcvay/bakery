@@ -31,7 +31,7 @@ Use the console application to view special pricing for Bread and Pastries at Pi
 
 ## Known Bugs
 
-- None so far
+- There is a warning when you run the app due to an async function that lacks await. This is so that I can have a function, `Start()` that loops through the console app when called, that can *also* access local variables for price to display a Grand Total; when `Start()` was static, it could not access price variables.
 
 ## License
 
