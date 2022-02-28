@@ -5,12 +5,10 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    public int PastryCount { get; set; }
-    // private static List<Pastry> _instances = new List<Pastry>{};
+    public int PastryCount { get; set; } 
     public Pastry(int pastryCount)
     {
       PastryCount = pastryCount;
-      // _instaces.Add(this);
     }
 
     public static int GetPastryPrice(int pastryCount)
