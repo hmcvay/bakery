@@ -22,6 +22,7 @@ Use the console application to view special pricing for Bread and Pastries at Pi
 - Clone the Repository
 - [Install .NET 5 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer)
 - Use your terminal to navigate to the top level of this directory
+- Run `dotnet restore` to restore all dependencies
 - Run `dotnet build`
 - Navigate to "Bakery.Tests" directory
 - Run `dotnet test` to ensure all code is passing

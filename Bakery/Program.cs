@@ -9,6 +9,11 @@ namespace Bakery
   {
     public static void Main()
     {
+      int breadAmount = 0;
+      int pastryAmount = 0;
+      int breadTotal = 0;
+      int pastryTotal = 0;
+
       Console.WriteLine("----------------------------------");
       Console.WriteLine("Welcome to Pierre's Bakery!");
       Console.WriteLine("----------------------------------");
@@ -27,7 +32,7 @@ namespace Bakery
         Console.WriteLine("Please choose PASTRY or BREAD");
         Console.WriteLine("----------------------------------");
         Start();
-        static void Start()
+        async void Start()
         {
           string choice = Console.ReadLine().ToLower();
           if (choice == "bread")
@@ -36,10 +41,11 @@ namespace Bakery
             Console.WriteLine("BREAD: $5 each / buy 2 get 1 FREE");
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Please enter how many loaves to order:");
-            int breadAmount = Int32.Parse(Console.ReadLine());
-            int breadAmountTotal = Bread.GetUnitPrice(breadAmount);
+            breadAmount += Int32.Parse(Console.ReadLine());
+            Bread custBread = new Bread(breadAmount);
+            breadTotal += Bread.GetUnitPrice(breadAmount);
             Console.WriteLine("----------------------------------");
-            Console.WriteLine(breadAmount + " loaves of bread = $" + breadAmountTotal);
+            Console.WriteLine(breadAmount + " loaves of bread = $" + breadTotal);
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Would you like add more BREAD or PASTRY to your oder? or are you DONE?");
             Console.WriteLine("----------------------------------");
@@ -49,10 +55,11 @@ namespace Bakery
           {
             Console.WriteLine("PASTRY: $2 each, or 3 for $5");
             Console.WriteLine("Please enter how many pastries to order:");
-            int pastryAmount = Int32.Parse(Console.ReadLine());
-            int pastryAmountTotal = Pastry.GetPastryPrice(pastryAmount);
+            pastryAmount += Int32.Parse(Console.ReadLine());
+            Pastry custPastry = new Pastry(pastryAmount);
+            pastryTotal += Pastry.GetPastryPrice(pastryAmount);
             Console.WriteLine("----------------------------------");
-            Console.WriteLine(pastryAmount + " pastries = $" + pastryAmountTotal);
+            Console.WriteLine(pastryAmount + " pastries = $" + pastryTotal);
             Console.WriteLine("Would you like add more BREAD or PASTRY to your oder? or are you DONE?");
             Console.WriteLine("----------------------------------");
             Start();
@@ -62,9 +69,9 @@ namespace Bakery
             // WHY DOESN'T THIS WORK?
             //int pastryAmountTotal = Pastry.GetPastryPrice(pastryAmount);
             // int breadAmountTotal = Bread.GetUnitPrice(breadAmount);
-            // int grandTotal = pastryAmountTotal + breadAmountTotal;
+            int grandTotal = pastryTotal + breadTotal;
             Console.WriteLine("----------------------------------");
-            Console.WriteLine("Your grand total is: $ + grandTotal");
+            Console.WriteLine("Your grand total is: $" + grandTotal);
             Console.WriteLine("----------------------------------");
           }
           else
